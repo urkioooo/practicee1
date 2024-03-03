@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="">Home</a>
+      </nav>
+    </header>
+
+    <div class="carousel">
+      <div class="list">
+        <div class="item">
+          <img src="bg2f2.jpg" />
+          <div class="content">
+            <div class="author">CARLOS</div>
+            <div class="title">WEB DEVELOPER</div>
+            <div class="topic">HOME</div>
+            <div class="des">
+              Hello, and good day! My name is Carlos Miguel Apolinar, and I am a
+              recent graduate of Grade 12 STEM. Despite being new to the field,
+              I am a determined full-stack web developer, having completed my
+              training while still in school. My journey into web development
+              and STEM student is a well- stablished passion for tehcnology and
+              a desire to express myself creatively. While I may lack
+              professional experience, I compensated by dedicating myself to
+              learning the craft. Balancing my studies with web development
+              training wasn't easy, but my perseverance, focus, and dedication
+              helped me overcome challenges along the way.
+            </div>
+            <div class="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="bg2f2.jpg" />
+          <div class="content">
+            <div class="author">CARLOS</div>
+            <div class="title">WEB DEVELOPER</div>
+            <div class="topic">Skills</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="bg2f2.jpg" />
+          <div class="content">
+            <div class="author">CARLOS</div>
+            <div class="title">WEB DEVELOPER</div>
+            <div class="topic">HOME</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="bg2f2.jpg" />
+          <div class="content">
+            <div class="author">CARLOS</div>
+            <div class="title">WEB DEVELOPER</div>
+            <div class="topic">HOME</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thumbnail">
+        <div class="listThumbnail">
+          <div class="item">
+            <img src="kio11.jpg" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img2.jpg" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img3.jpg" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img4.jpg" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+
+      <div class="time"></div>
+    </div>
+    <script>
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".carousel-item");
+      const totalItems = items.length;
+
+      function moveCarousel(direction) {
+        currentIndex = (currentIndex + direction + totalItems) % totalItems;
+        const offset = -currentIndex * 300; // Width of each carousel item
+
+        document.querySelector(
+          ".carousel-container"
+        ).style.transform = `translateX(${offset}px)`;
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
